@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Canvas Game</title>
+    <link href="ressources/css/app.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <img id="headerImg" src='ressources/images/logoBoom.png'>
+        </div>
+        <nav>
+            <ul class="menuList" id="menu">
+                <li><a href="#index">Game</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="help" src="templates/help.html"></section>
+    <section id="index" src="templates/index.html"></section>
+    <section id="story" src="templates/story.html"></section>
+    <section id="game">
+        <div id="gameDiv">
+            <div id="gameCanvas">
+                    <canvas id="canvas"></canvas>
+            </div>
+            <div id="Instructionsleft">
+
+                <h2 id="p1">Player 1</h2>
+
+                <p>W, A, S, D - Move</p>
+                <img id="wasd" src="ressources/images/keys/wasd.svg">
+
+
+                <p>Shift - Plant the bomb</p>
+                <img id="shift" src="ressources/images/keys/shift.svg">
+
+            </div>
+
+            <div id="Instructionsright">
+
+                <h2 id="p2">Player 2</h2>
+
+
+                <p>Arrow Keys - Move</p>
+                <img id="arrows" src="ressources/images/keys/move.svg">
+
+
+                <p>Spacebar - Plant the bomb</p>
+                <img id="spacebar" src="ressources/images/keys/spacebar.svg">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div id="PlayerStats">
+        <h2>Stats of the game</h2>
+        <div id="open-modal" class="modal-window">
+          <div>
+            <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+            <h1>You played the game here !</h1>
+            <div id="mapid"></div>
+          </div>
+        </div>
+        <table id="results">
+            <tr>
+                <th id="sp1"></th>
+                <th id="sp2"></th>
+            </tr>
+           <tr>
+               <td id="imagePlayer1"></td>
+               <td id="imagePlayer2"></td>
+           </tr>
+            <tr>
+               <td class="statstable">Losted lifes<span class="dataTable" id="cptLife1"></span></td>
+               <td class="statstable">Losted lifes<span class="dataTable" id="cptLife2"></span></td>
+           </tr>
+           <tr>
+               <th>Bomb</th>
+               <th>Bomb</th>
+           </tr>
+           <tr>
+               <td class="statstable">Bombs planted<span class="dataTable" id="deposedBomb1"></span></td>
+               <td class="statstable">Bombs planted<span class="dataTable" id="deposedBomb2"></span></td>
+           </tr>
+            <tr>
+               <th>Bonuses</th>
+               <th>Bonuses</th>
+           </tr>
+            <tr>
+               <td class="statstable">Speed bonus<span class="dataTable" id="bonusSpeed1"></span></td>
+               <td class="statstable">Speed bonus<span class="dataTable" id="bonusSpeed2"></span></td>
+           </tr>
+            <tr>
+               <td class="statstable">Range bonus<span class="dataTable" id="bonusRayon1"></span></td>
+               <td class="statstable">Range bonus<span class="dataTable" id="bonusRayon2"></span></td>
+           </tr>
+            <tr>
+               <th>Blocks</th>
+               <th>Blocks</th>
+           </tr>
+            <tr>
+               <td class="statstable">Block exploded<span class="dataTable" id="explosedBloc1"></span></td>
+               <td class="statstable">Block exploded<span class="dataTable" id="explosedBloc2"></span></td>
+           </tr>
+        </table>
+
+        <a id="PositionLink" href="#open-modal">Your position</a>
+
+    </div>
+
+
+    </section>
+    <footer>
+
+        <div>
+            Source code <a href="https://github.com/gigi1897/boom" target="_blank">here</a>
+        </div>
+
+    </footer>
+    <script src="ressources/js/spapp.js"></script>
+    <script src="ressources/js/game.js"></script>
+
+</body>

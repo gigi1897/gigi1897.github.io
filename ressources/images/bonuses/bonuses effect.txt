@@ -1,0 +1,6 @@
+- bonus_speed.png: increase speed 
+- bonus_expl.png : increase explosion range
+- bonus_bomb.png : enable one more bomb on the field by player
+
+- bonus_nuke.png : destroy everthing on the map and stops the game
+(the player with more lifes wins the game)

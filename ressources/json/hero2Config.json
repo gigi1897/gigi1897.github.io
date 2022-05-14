@@ -1,0 +1,20 @@
+{
+    "speed": 60,
+    "x": 485,
+	"y": 380,
+    "middlePos": 16,
+    "heigthPx": 23,
+    "rayon":1,
+    "cptLife": 3,
+    "droppedBomb": false,
+    "name": null,
+    "sprite": null,
+    "current_state": "down",
+    "current_frame": 0,
+    "stats": {
+        "deposedBomb": 0,
+        "bonusSpeed": 0,
+        "bonusRayon": 0,
+        "explosedBloc": 0
+    }
+}

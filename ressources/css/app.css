@@ -1,0 +1,538 @@
+/*header*/
+@font-face {
+    font-family: '8bit16';
+    src:url('../font/8bit16.ttf');
+}
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#headerImg{
+    width: 200px;
+    height: 100px;
+}
+header nav {
+    display: inline-block;
+    font-size: 0.75em;
+}
+header li {
+    float: left;
+    font-weight: bold;
+}
+li {
+    list-style-type: none;
+}
+header li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+#titre{
+    text-align: center;
+}
+
+input[type="text"]
+{
+    opacity:0.9;
+    border: none;
+}
+
+#wasd{
+    width:50%;
+    height:50%;
+}
+
+#shift{
+    width:40%;
+    height:1%;
+}
+
+
+#arrows{
+    width:41%;
+    height:41%;
+}
+
+#spacebar{
+    width:60%;
+    height:43pt;
+}
+
+/*section index*/
+
+#selectyourplayer{
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 0px solid black;
+    margin-left:auto;
+    margin-right:auto;
+}
+#index>*{
+    padding: 20px;
+}
+#playersList{
+    text-align: center;
+}
+
+td{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background-image:url('../images/background/whitetrans.png');
+}
+
+#player1, #player2{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 2px dashed black;
+    text-align: center;
+    background-color: transparent;
+}
+
+input{
+    text-align: center;
+}
+
+#player1choice{
+    text-align: center;
+    padding-top: 1%;
+    margin-right: 5%;
+}
+#player1choice>*, #player2choice>*{
+    padding: 5px;
+
+
+}
+
+#player1choice>div, #player2choice>div{
+    padding-top: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#player2choice{
+    text-align: center;
+    padding-top: 1%;
+    margin-left: 5%;
+}
+
+#playButton{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#PlayerSelecter {
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+.btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  font-family: '8bit16', Fallback, sans-serif;
+}
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  position: relative;
+  top: 3px;
+  box-shadow: none !important;
+}
+.startGame {
+  display: block;
+  margin: 0 auto;
+  background: #FCCE5B;
+  box-shadow: 0px 4px 0px #847c21;
+}
+
+
+
+
+/*section game*/
+#gameCanvas  {
+    margin: auto;
+    text-align: center;
+}
+#game>*{
+    padding: 20px;
+}
+#instructions{
+    text-align: center;
+    color:#FCCE5B;
+}
+canvas{
+    margin-top: 20px;
+}
+#Instructionsleft{
+    position:absolute;
+    left: 10%;
+    top: 30%;
+    color:white;
+    text-align: right;
+}
+
+#Instructionsleft>p, #Instructionsright>p{
+    padding:15px;
+}
+#Instructionsleft>h2{
+    text-align: center;
+}
+#Instructionsright{
+    position:absolute;
+    right: 5%;
+    top: 30%;
+    color:white;
+    text-align: left;
+}
+#Instructionsright>h2{
+    text-align: center;
+}
+
+/*section home*/
+#help, #story{
+    margin: 20px;
+}
+#help,#story>div>*{
+    padding-bottom: 15px;
+    font-family: "Arial";
+}
+#introHomeImg{
+    height: 320px;
+    width: 340px;
+}
+
+
+.centerImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*Game Over*/
+#container {
+  padding: 1em;
+  font-family: '8bit16', Fallback, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2f99ff;
+  text-shadow: 0px 2px #255fcc;
+    height: 446px;
+}
+#PlayerStats{
+    margin: 30px;
+    display: none;
+
+}
+
+#sp1, #sp2{
+  font-family: '8bit16', Fallback, sans-serif;
+    font-size: 120%;
+    padding-bottom: 10px;
+}
+
+
+#imagePlayer1,#imagePlayer2{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color:rgb(246, 202, 92);
+}
+
+
+
+#gameOver {
+  font-size: 3em;
+  /* Change glitch effect here */
+  /* animation: glitch-2 1s infinite linear; */
+  animation: glitch-1 2s infinite linear;
+    margin-top: 200px;
+}
+/*statistiques*/
+.dataTable{
+    float:right;
+    padding-right: 5%;
+}
+
+
+#PlayerStats > h2 {
+    padding-bottom: 28px;
+    color:rgb(246, 202, 92);
+}
+
+#results td{
+
+    height: 30px;
+        color:lightgray ;
+
+}
+#results th{
+
+padding-bottom: 10px;
+padding-top: 10px;
+width:250px;
+
+}
+
+
+#results{
+
+font-family: 'Arial', Fallback, sans-serif;
+/*width:500px;*/
+    color:white;
+
+}
+
+.statstable{
+    text-align: left;
+    padding-left: 1%;
+}
+
+#PositionLink{
+    padding-top: 10px;
+     text-align: center;
+    display: block;
+    margin: auto;
+    color:white;
+    font-size:80%;
+}
+
+/*----------------------------------------------------------*/
+@keyframes glitch-1 {
+  0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% {opacity: 1; transform: scaleX(1) scaleY(1); }
+  13% {opacity: .8; transform: scaleY(2); color: #0ff;}
+  53% {opacity: .8; transform: scaleX(.7);  color: #f0f;}
+  83% {opacity: 8; transform: rotate(-10deg); color: #ff0;}
+}
+
+@keyframes glitch-2 {
+  13% {color: #0ff;}
+  53% {color: #f0f;}
+  83% {color: #ff0;}
+}
+
+#infoGameOver{
+    margin-top: 30px;
+    animation: glitch-2 2s infinite linear;
+}
+
+/*==========================================================================================================*/
+#Git{
+    color: white;
+}
+html{
+    height:100%;
+}
+footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;
+  background-color: #04102A;
+  color: white;
+  text-align: center;
+ padding-top: 20px;
+}
+body {
+  min-height:100%;
+
+  position:relative;
+
+  font-family: '8bit16', Fallback, sans-serif;
+}
+
+h1 {
+    font-size: 1.10em;
+}
+h2 {
+    color:black;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  font-family: '8bit16', Fallback, sans-serif;
+}
+
+/* all sections are off by default */
+body > section {
+  display:none;
+
+}
+
+body.help > section#help,
+body.index > section#index,
+body.story > section#story,
+body.game > section#game,
+body.stats > section#stats{
+    display:block;
+}
+
+body.game{
+    background: url('../images/background/midday2.png');
+    background-size:cover;
+}
+body.index{
+    background: url('../images/background/morning2.png');
+    background-size:cover;
+}
+body.stats{
+    background: url('../images/background/night.png');
+    background-size:cover;
+}
+
+
+#mapid{
+    height:300px;
+    width:400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* nav highlightion rules */
+body.help #menu a[href="#help"],
+body.index #menu a[href="#index"],
+body.story #menu a[href="#story"]{
+    background-color: #555;
+}
+
+
+/*header*/
+body> header {
+  background-color: #04102A;
+  color: #f2f2f2;
+  box-shadow: 0px 5px 8px #ccc;
+}
+
+header h2{
+  display: inline-block;
+}
+
+#navigation {
+    background: white;
+    color: #04102A;
+    display: flex;
+    align-items: center;
+}
+
+body .brand {
+  padding: 14px 12px;
+  text-align: left;
+}
+.brand a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+.brand span{
+  display: block;
+}
+
+ul.topnav {
+  text-align: right;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #04102A;
+}
+
+ul.topnav li {
+  display:inline;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  /*font-size: 1.2em;*/
+}
+
+ul.topnav li a:hover {
+    background-color: #555;
+}
+ul.topnav li a.selected {
+    background-color: #555;
+}
+ul.topnav li.icon {
+  display: none;
+}
+
+/*==================================================================================*/
+.modal-window {
+  position: fixed;
+  background-color: rgba(200, 200, 200, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 700px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #fff;
+  color: #444;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+#txt{
+    font-size: 80%;
+}
+#commandes{
+    padding-top: 1%;
+    height: 50%;
+    width: 50%;
+}

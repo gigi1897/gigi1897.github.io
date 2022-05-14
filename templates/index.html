@@ -1,0 +1,70 @@
+    <h2 id="selectyourplayer">Select your player !</h2>
+    <p id="instructions">Drag and drop your player in the dashed zone, give him a name click "START GAME" !</p>
+
+<form method="get" id="formulaire">
+    <div id="playersList">
+        <table class="center">
+            <!--première ligne avec 4 persos-->
+          <tr>
+            <td>
+                <div id="sprite1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="ressources/images/sprites/sprite_perso2.png" draggable="true" ondragstart="drag(event)" id="sprite_perso2" ondragend="drop(event)">
+                </div>
+            </td>
+            <td>
+                <div id="sprite2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="ressources/images/sprites/hero.png" draggable="true" ondragstart="drag(event)" id="hero" ondragend="drop(event)">
+                </div>
+            </td>
+            <td>
+                <div id="sprite3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="ressources/images/sprites/Picatchu.png" draggable="true" ondragstart="drag(event)" id="Picatchu" ondragend="drop(event)">
+                </div>
+            </td>
+          </tr>
+
+            <!--deuxième ligne-->
+
+          <tr>
+            <td>
+                <div id="sprite5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="ressources/images/sprites/bomberman.png" draggable="true" ondragstart="drag(event)" id="bomberman" ondragend="drop(event)">
+                </div>
+            </td>
+            <td>
+                <div id="sprite6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="ressources/images/sprites/autre.png" draggable="true" ondragstart="drag(event)" id="autre" ondragend="drop(event)">
+                </div>
+            </td>
+            <td>
+                <div id="sprite7" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="ressources/images/sprites/Mario.png" draggable="true" ondragstart="drag(event)" id="Mario" ondragend="drop(event)">
+                </div>
+            </td>
+          </tr>
+
+        </table>
+    </div>
+
+        <div id="PlayerSelecter">
+            <div id="player1choice">
+                <p>Player 1</p>
+                <p><input maxlength="8" type="text" name="player1name" placeholder="Enter your name" required></p>
+
+                <div id="player1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+
+            <div id="player2choice">
+                <p>Player 2</p>
+                <p><input id="player2InputName" maxlength="8" type="text" name="player2name" placeholder="Enter your name" disabled required></p>
+
+                <div id="player2" ondrop="drop(event)"></div>
+            </div>
+
+        </div>
+        <input name="image1" type="hidden" id="p1Img">
+        <input name="image2" type="hidden" id="p2Img">
+        <div id="playButton">
+            <button id="play" onclick="sub()" type="submit" class="btn startGame">Start Game</button>
+        </div>
+    </form>
